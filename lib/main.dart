@@ -59,31 +59,35 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             ],
           ),
       ),
-      body: TabBarView (
-        controller: _tabController,
-        children: const [
-          Center(
-            child: Text(
-              'lorem ipsum dolor sit amet'
-            ),
-          ),
-           Center(
-            child: Text(
-              'lorem ipsum dolor sit amet'
-            ),
-          ),
-           Center(
-            child: Text(
-              'lorem ipsum dolor sit amet'
-            ),
-          ),
-          Center(
-            child: Text(
-              'lorem ipsum dolor sit amet'
-            ),
-          )
-        ],
-      )
+      body: TabBarView(
+  controller: _tabController,
+  children: const [
+    // Contenu de l'onglet 1
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Flexible(
+            child: Text('lorou vsLorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta ducimus exercitationem et aut deserunt animi in placeat modi, quaerat deleniti cumque fugiat repellat repudiandae autem neque non mollitia nam.'
+             ),
+            )
+          ],
+        ),
+        SizedBox(width: 20,),
+        
+      ],
+    ),
+    // Contenu de l'onglet 2
+    Center(
+      child: Text(
+        'Contenu de l\'onglet 2',
+        style: TextStyle(fontSize: 24),
+      ),
+    ),
+  ],
+),
     );
   }
 }
